@@ -1,64 +1,28 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
 @import 'global';
 
-body {
-    height: 100%;
-    font-family: 'OpenSans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.3;
-}
-
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.main {
-    flex: 1 1 auto;
-}
-
-.section {
-    padding: 72px 0;
-}
-
-.container {
-    max-width: 1320px;
-    width: 100%;
-    height: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.btn-green {
-    color: $white;
-    padding: 12px 24px;
-    background-color: $green-900;
-    border-radius: 6px;
-
-}
-
-
-
-
 .list__item,
-.user__item,
-.advantages__item {
+.user__item {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
+}
+
+.filter__button.mixitup-control-active {
+    margin-bottom: -3px;
+    border-bottom: 3px solid rgba(99, 166, 14, 0.2);
 }
 
 .header {
 
     &__contacts {
         height: 50px;
+        font-size: 13px;
+        @extend %OpenSans-700;
         color: $white;
-        background-color: $dark-800
+        background-color: $dark-800;
     }
 
     &__search {
@@ -87,8 +51,6 @@ body {
     }
 }
 
-// ============================================================
-
 .contacts {
 
     &__inner {
@@ -109,17 +71,16 @@ body {
 
     &__list {
         display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 
-    &__list:not(:last-child) li {
-        padding-left: 30px;
+    &__list:first-child li:first-child {
+        padding-left: 43px;
+        margin-right: 44px;
     }
 
-    &__list:not(:last-child) li:first-child {
+    &__list:first-child li:last-child {
         padding-left: 38px;
-        margin-right: 48px;
     }
 
     &__list:last-child li:not(:last-child) {
@@ -129,17 +90,24 @@ body {
 
 .list {
 
-    &__item {}
+    &__item {
+        height: 100%;
+        background-position: 0 center;
+        background-size: 32px 22px;
+    }
+
+    &__link {
+        font-size: 13px;
+        line-height: 2;
+        text-transform: uppercase;
+    }
 }
-
-
-// ============================================================
 
 .catalog__list {
     padding: 16px 18px 16px 61px;
     color: $green-900;
     background-repeat: no-repeat;
-    background-position: 188px 24px;
+    background-position: 207px 24px;
 }
 
 .list:first-child {
@@ -161,6 +129,7 @@ body {
     &__item {
         max-width: 576px;
         width: 100%;
+        margin-right: 20px;
     }
 }
 
@@ -186,7 +155,7 @@ body {
     }
 
     &__button {
-        padding: 16px 50px;
+        padding: 16px 54px;
         font-weight: 600;
         letter-spacing: 3%;
         color: $white;
@@ -199,20 +168,17 @@ body {
     }
 }
 
-// .logo {
-// }
-
-
 .user {
     display: flex;
 
     &__item {
-        @include background-icons;
         background-size: 32px 32px;
+        background-position: center center;
+        @extend %background-icons;
     }
 
     &__item:not(:last-child) {
-        margin-right: 33px;
+        margin-right: 19px;
     }
 
     &__link {
@@ -222,7 +188,7 @@ body {
     }
 
     &__number {
-        padding: 4px;
+        padding: 2px;
         font-size: 10px;
         font-weight: 600;
         border-radius: 50%;
@@ -249,22 +215,22 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         max-width: 1290px;
         width: 100%;
-        max-height: 315px;
-        height: 100%;
-        padding: 24px;
+        min-height: 315px;
+        padding: 26px 0px 30px 24px;
+        letter-spacing: 0;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 6px;
+        transform: translate(-50%, -50%);
     }
 
     &__title {
         max-width: 80%;
         margin-bottom: 5px;
-        font-family: 'Ruda', sans-serif;
-        font-weight: 900;
+        @extend %Ruda-900;
         font-size: 60px;
+        color: $dark-500;
         text-transform: uppercase;
     }
 
@@ -274,7 +240,7 @@ body {
     }
 
     &__text {
-        margin-bottom: 39px;
+        margin-bottom: 34px;
         font-size: 16px;
         line-height: 1.4;
         color: $dark-500;
@@ -282,6 +248,10 @@ body {
 
     &__button {
         display: inline-block;
+        padding: 12px 24px;
+        @extend %OpenSans-400;
+        font-size: 18px;
+        letter-spacing: 0.03em;
     }
 }
 
@@ -297,7 +267,6 @@ body {
     background-position: center center;
     background-size: 19px 32px;
     transform: translateY(-50%);
-
 }
 
 .header__slider .slick-arrow.slick-prev {
@@ -324,12 +293,23 @@ body {
 .advantages {
 
     &__item {
+        max-width: 264px;
+        min-height: 50px;
         padding-left: 74px;
+        letter-spacing: 0;
+        @extend %advantages-icons;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 65px;
     }
 
     &__lable {
+        font-size: 16px;
+        @extend %OpenSans-600;
         color: $dark-900;
         font-weight: 600;
+        margin-bottom: 6px;
     }
 
     &__text {
@@ -337,13 +317,418 @@ body {
     }
 
     &__inner {
-        padding: 48px 0 29px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+        padding: 48px 0 29px;
+        margin-right: 52px;
     }
 }
 
+.products {
+    text-align: center;
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 48px;
+        @extend %OpenSans-700;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px 18px 0;
+    }
+
+    &__btn {
+        padding: 12px 24px;
+        font-size: 18px;
+        color: $green-900;
+        background-color: $white;
+        border: 1px solid $green-900;
+        border-radius: 6px;
+        margin-bottom: 72px;
+        transition: background-color 0.4s ease;
+    }
+
+    &__banners {
+        display: flex;
+    }
+}
+
+
+.filter {
+
+    &__list:not(:last-child) {
+        margin-right: 16px;
+    }
+
+    &__button {
+        font-size: 15px;
+        text-transform: uppercase;
+        border: transparent;
+        background: transparent;
+    }
+}
+
+.content {
+
+    &__list {
+        max-height: 409px;
+        height: 100%;
+        margin: 0 30px 30px 0;
+    }
+}
+
+.banners {
+
+    &__item {
+        flex-basis: 24%;
+        padding: 76px 0 76px 32px;
+        @extend %background;
+        text-align: left;
+        text-transform: uppercase;
+        border-radius: 3px;
+    }
+
+    &__item:first-child {
+        flex-basis: 51%;
+        color: $white;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__item:first-child &__title {
+        max-width: 400px;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__item:first-child &__lable &__link {
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__item:first-child &__link {
+        border-bottom: 2px solid $white;
+    }
+
+    &__lable {
+        margin-bottom: 18px;
+        font-size: 12px;
+        @extend %OpenSans-700;
+    }
+
+    &__title {
+        max-width: 200px;
+        margin-bottom: 12px;
+        font-size: 30px;
+        @extend %Ruda-600;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-bottom: 6px;
+        @extend %OpenSans-700;
+        border-bottom: 2px solid $dark-900;
+    }
+}
+
+.article {
+    @extend %article;
+    text-align: left;
+
+    &__marks {
+        position: relative;
+        top: 6px;
+        left: 12px;
+        max-width: 70px;
+        min-height: 49px;
+    }
+
+    &__heart {
+        position: absolute;
+        top: 19px;
+        right: 6px;
+        border: transparent;
+        background: transparent;
+    }
+
+    &__img {
+        margin-bottom: 26px;
+    }
+
+    &__lable {
+        height: 68px;
+        padding: 0 18px;
+        @extend %OpenSans-600;
+    }
+
+    &__price {
+        height: 36px;
+        padding-left: 18px;
+    }
+
+    &__price li {
+        height: 18px;
+    }
+
+    &__basket {
+        position: absolute;
+        right: 12px;
+        bottom: 7px;
+        border-radius: 6px;
+    }
+
+    &__btn {
+        display: block;
+        padding: 6px;
+        background-color: transparent;
+        border: transparent;
+        outline: transparent;
+    }
+}
+
+.btn {
+
+    &__icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px 16px;
+        background-color: $green-900;
+        border-radius: 3px;
+        transition: background-color 0.4s;
+    }
+}
+
+.marks {
+
+    &__new,
+    &__hot,
+    &__discount {
+        display: inline-block;
+        padding: 3px 6px;
+        margin-bottom: 6px;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+        border-radius: 6px;
+        text-transform: uppercase;
+    }
+
+    &__new {
+        margin-bottom: 6px;
+        background-color: $green-900;
+    }
+
+    &__discount {
+        background-color: $red-900;
+    }
+
+    &__hot {
+        background-color: $orange-900;
+    }
+}
+
+.price {
+
+    &__old {
+        position: relative;
+        color: $silver-600;
+    }
+
+    &__old::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 7px;
+        width: 100%;
+        height: 1px;
+        background-color: $silver-600;
+        transform: rotate(-14.99deg);
+    }
+
+    &__new {
+        display: block;
+    }
+}
+
+.footer {
+    color: $white;
+    background-color: $dark-800;
+
+    &__top {
+        padding: 29px 0;
+    }
+
+    &__content {
+        padding-bottom: 21px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0;
+    }
+
+    &__inner span {
+        line-height: 2.4;
+        text-transform: uppercase;
+    }
+
+    &__lable {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__input {
+        padding: 12px;
+        margin: 0;
+        border-radius: 6px 0px 0px 6px;
+    }
+
+    &__btn {
+        padding: 15px 14px;
+        @extend %OpenSans-700;
+        font-size: 12px;
+        line-height: 1;
+        color: $white;
+        background-color: $green-900;
+        border-radius: 0px 6px 6px 0px;
+        text-transform: uppercase;
+        border: transparent;
+        outline: transparent;
+        transition: background-color 0.4s;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        padding-left: 65px;
+    }
+
+    &__list {
+        column-count: 3;
+        column-gap: 75px;
+    }
+
+    &__item {
+        margin-bottom: 21px;
+    }
+
+    &__contacts {
+        padding-right: 3px;
+    }
+
+    &__contacts li {
+        margin-bottom: 21px;
+    }
+
+    &__contacts li:last-child {
+        display: flex;
+        margin: -6px 0 0 -10px;
+    }
+
+    &__social {
+        display: block;
+        @extend %background-icons;
+        transition: opacity 0.7s ease;
+    }
+
+    &__copyright {
+        display: flex;
+        padding: 24px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+    }
+}
+
+.copyright {
+
+    &__icons {
+        display: flex;
+    }
+
+    &__icons a {
+        display: block;
+        width: 100px;
+        height: 29px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__icons a:first-child {
+        margin-right: 24px;
+    }
+
+    &__icons a:last-child {
+        width: 50px;
+    }
+}
+
+// HOVER ACTIVE FOCUSE
+.list__item:hover,
+.footer__social:active {
+    opacity: 0.7;
+}
+
+.form__button:hover {
+    background-color: rgba(49, 53, 43, 0.85);
+}
+
+.form__button:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-green:hover,
+.btn__icon:hover {
+    background-color: #4D810C;
+}
+
+.btn-green:active,
+.btn__icon:active {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: $green-900;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-green:focus,
+.btn__icon:focus,
+.form__button:focus,
+.footer__input:focus,
+.form__input:focus {
+    box-shadow: 0px 0px 0px 4px #E0EDCF;
+}
+
+.article:hover,
+.footer__input:focus,
+.form__input:focus {
+    border: 1px solid $green-900;
+}
+
+.products__btn:hover,
+.header__catalog:hover,
+.header__slider .slick-arrow:hover {
+    background-color: #EFF6E7;
+}
+
+.products__btn:active {
+    background-color: $white;
+    box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+.products__btn:focus {
+    box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+}
+
+.article__heart:hover svg>path {
+    fill: rgba(255, 184, 0, 1);
+    transition: fill 0.6s;
+}
 
 
 @import 'media';

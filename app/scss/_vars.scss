@@ -24,9 +24,71 @@ $white: #FFFFFF;
 
 $white-08: rgba(255, 255, 255, 0.8);
 
-@mixin background-icons {
+%OpenSans-300 {
+    font-family: 'OpenSans';
+    font-weight: 300;
+}
+
+%OpenSans-400 {
+    font-family: 'OpenSans';
+    font-weight: 400;
+}
+
+%OpenSans-600 {
+    font-family: 'OpenSans';
+    font-weight: 600;
+}
+
+%OpenSans-700 {
+    font-family: 'OpenSans';
+    font-weight: 700;
+}
+
+%Ruda-400 {
+    font-family: 'Ruda';
+    font-weight: 400;
+}
+
+%Ruda-600 {
+    font-family: 'Ruda';
+    font-weight: 600;
+}
+
+%Ruda-700 {
+    font-family: 'Ruda';
+    font-weight: 700;
+}
+
+%Ruda-900 {
+    font-family: 'Ruda';
+    font-weight: 900;
+}
+
+%background-icons {
     width: 44px;
     height: 44px;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+%background {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+%advantages-icons {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 50px 50px;
+}
+
+%article {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    max-height: 409px;
+    padding: 3px 0 18px 0;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
 }

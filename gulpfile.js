@@ -20,9 +20,6 @@ function browsersync() {
   })
 }
 
-
-
-
 function styles() {
   return src('app/scss/style.scss')
     .pipe(scss({outputStyle: 'compressed'}))
@@ -35,13 +32,11 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
-
-
-
 function scripts() {
     return src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/mixitup/dist/mixitup.min.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -49,9 +44,6 @@ function scripts() {
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 }
-
-
-
 
 function images() {
   return src('app/images/**/*.*')
@@ -69,7 +61,6 @@ function images() {
    .pipe(dest('dist/images'))
 }
 
-
 function build() {
   return src([
     'app/**/*.html',
@@ -79,22 +70,15 @@ function build() {
   .pipe(dest('dist'))
 }
 
-
-
 function cleanDist() {
   return del('dist')
 }
-
-
-
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload)
 }
-
-
 
 exports.styles = styles;
 exports.scripts = scripts;

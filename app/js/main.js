@@ -6,4 +6,6 @@ $(function () {
         slidesToScroll: 1
       });
       
+
+      var mixer = mixitup('.products__content');
   });
