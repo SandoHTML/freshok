@@ -2,7 +2,9 @@ body {
     height: 100%;
     @extend %OpenSans;
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.3;
+    background-color: $white;
 }
 
 .wrapper {
@@ -28,170 +30,29 @@ body {
     margin: 0 auto;
 }
 
-.article {
-    position: relative;
-    height: 100%;
-    padding: 50px 18px;
-    text-align: left;
-    background-color: $white;
-    border: 1px solid rgba(17, 17, 17, 0.2);
-    border-radius: 6px;
-    @extend %transition;
-
-    &:hover {
-        border: 1px solid #63A60E;
-    }
-
-    &__badges {
-        max-width: 100px;
-        position: absolute;
-        top: 12px;
-        left: 12px;
-    }
-
-    &__badge {
-        display: inline-block;
-        margin-bottom: 6px;
-        padding: 3px 6px;
-        font-size: 10px;
-        font-weight: 700;
-        line-height: 1;
-        color: $white;
-        border-radius: 6px;
-        text-transform: uppercase;
-    }
-
-    &__badge--new {
-        background-color: $green-900;
-    }
-
-    &__badge--discount {
-        background-color: $red-900;
-    }
-
-    &__badge--hit {
-        background-color: $orange-900;
-    }
-
-    &__heart {
-        position: absolute;
-        top: 11px;
-        right: 6px;
-        padding: 6px;
-        background-color: transparent;
-        @extend %transition;
-
-        &:hover path {
-            fill: #FFB800;
-        }
-    }
-
-    &__icon--basket {
-        width: 16px;
-        height: 16px;
-    }
-
-    &__img {
-        margin-bottom: 25px;
-    }
-
-    &__lable {
-        min-height: 57px;
-        margin-bottom: 10px;
-        font-weight: 600;
-        line-height: 1.4;
-        letter-spacing: 0.03em;
-    }
-
-    &__bottom {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__price {
-        position: absolute;
-        left: 20px;
-        bottom: 17px;
-    }
-
-    &__price-old {
-        position: relative;
-        color: $silver-600;
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 9px;
-            width: 100%;
-            height: 1px;
-            background-color: $silver-600;
-            transform: rotate(-14.99deg);
-        }
-    }
-
-    &__price-new {
-        display: block;
-    }
-
-    &__availability {
-        font-size: 10px;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-
-    &__availability--available {
-        color: $green-900;
-    }
-
-    &__availability--ends {
-        color: $red-900;
-    }
-
-    &__availability--unavailable {
-        color: $silver-600;
-    }
-
-    &__basket {
-        position: absolute;
-        right: 18px;
-        bottom: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        background-color: $green-900;
-        border-radius: 3px;
-    }
-
-    &__star {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 14px;
-        bottom: 12px;
-        font-weight: 700;
-        line-height: 1;
-    }
+.logo {
+    object-fit: cover;
 }
 
 .button {
     color: $white;
     letter-spacing: 0.03em;
+    border: 1px solid transparent;
     transition: background-color 0.4s, opacity 0.4s;
-
-    &:active {
-        color: rgba(255, 255, 255, 0.5);
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
 
     &:focus {
         box-shadow: 0px 0px 0px 4px #E0EDCF;
+        border: 1px solid $green-900;
     }
 
     &:hover {
         background-color: #4D810C;
         box-shadow: none;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -215,7 +76,12 @@ body {
 }
 
 .currency {
+    padding-left: 6px;
     font-size: 14px;
+
+    &--promo {
+        padding-left: 5px;
+    }
 }
 
 .sr-only {

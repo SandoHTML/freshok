@@ -11,7 +11,7 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
 
-$white-08: rgba(255, 255, 255, 0.8);
+$white-08: rgba($white, 0.8);
 
 %OpenSans {
     font-family: 'OpenSans', sans-serif;
@@ -21,6 +21,22 @@ $white-08: rgba(255, 255, 255, 0.8);
     font-family: 'Ruda', sans-serif;
 }
 
+%radius {
+    border-radius: 6px;
+}
+
+%cover {
+    object-fit: cover;
+}
+
 %transition {
     transition: fill 0.4s, color 0.4s, background-color 0.4s, opacity 0.4s;
+}
+
+%textoverflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

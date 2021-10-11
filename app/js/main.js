@@ -11,6 +11,16 @@ $(function () {
 
 
 
+    $('.brands__list').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
+
+
 
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
