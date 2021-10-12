@@ -11,8 +11,6 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
 
-$white-08: rgba($white, 0.8);
-
 %OpenSans {
     font-family: 'OpenSans', sans-serif;
 }
@@ -35,7 +33,6 @@ $white-08: rgba($white, 0.8);
 
 %textoverflow {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;

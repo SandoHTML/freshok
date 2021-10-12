@@ -1,0 +1,41 @@
+.menu {
+    display: flex;
+    text-transform: uppercase;
+
+    &__item {
+        @extend %transition;
+
+        &--right {
+            margin-right: 24px;
+        }
+
+        &--delivery {
+            padding-left: 45px;
+            margin-right: 48px;
+            background-image: url('../images/svg/icon-address.svg');
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            background-size: contain;
+            @extend %transition;
+        }
+
+        &--phone {
+            padding-left: 34px;
+            background-image: url('../images/svg/tel.svg');
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            background-size: contain;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__link {
+        line-height: 1.8;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
