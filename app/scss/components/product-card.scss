@@ -1,0 +1,99 @@
+.product-card {
+    position: relative;
+    height: 100%;
+    padding: 57px 18px 50px 18px;
+    text-align: left;
+    background-color: $white;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    @extend %radius;
+    @extend %transition;
+
+    &:hover {
+        border: 1px solid #63A60E;
+    }
+
+    &__heart {
+        position: absolute;
+        top: 11px;
+        right: 6px;
+        padding: 6px;
+        background-color: transparent;
+        @extend %transition;
+
+        &:hover path {
+            fill: #FFB800;
+        }
+    }
+
+    &__icon--basket {
+        width: 16px;
+        height: 16px;
+    }
+
+    &__img {
+        margin-bottom: 18px;
+        @extend %cover;
+    }
+
+    &__lable {
+        display: block;
+        max-height: 57px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: 0.03em;
+        @extend %textoverflow;
+        -webkit-line-clamp: 3;
+        @extend %transition;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price {
+        position: absolute;
+        left: 20px;
+        bottom: 13px;
+        font-weight: 400;
+    }
+
+    &__price-old {
+        position: relative;
+        color: $silver-600;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 9px;
+            width: 100%;
+            height: 1px;
+            background-color: $silver-600;
+            transform: rotate(-14.99deg);
+        }
+    }
+
+    &__price-new {
+        display: block;
+        margin-right: 9px;
+    }
+
+    &__basket {
+        position: absolute;
+        right: 18px;
+        bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7px;
+        background-color: $green-900;
+        border-radius: 3px;
+    }
+}

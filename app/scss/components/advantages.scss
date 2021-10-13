@@ -1,0 +1,35 @@
+.advantages {
+    background-color: $silver-100;
+    padding: 49px 15px 28px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 923px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        max-width: 264px;
+        width: 100%;
+        padding-left: 74px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 50px 50px;
+    }
+
+    &__lable {
+        margin-bottom: 6px;
+        line-height: 1.4;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__text {
+        font-weight: 400;
+        line-height: 1.4;
+        @extend %textoverflow;
+        -webkit-line-clamp: 2;
+    }
+}

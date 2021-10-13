@@ -1,0 +1,30 @@
+.badges {
+    max-width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+    &__badge {
+        display: inline-block;
+        margin-bottom: 3px;
+        padding: 3px 6px;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+        @extend %radius;
+        text-transform: uppercase;
+
+        &--new {
+            background-color: $green-900;
+        }
+
+        &--discount {
+            background-color: $red-900;
+        }
+
+        &--hit {
+            background-color: $orange-900;
+        }
+    }
+}

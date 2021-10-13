@@ -1,0 +1,37 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+
+    &__item:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    &__button {
+        position: relative;
+        padding: 12px 0;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 0.03em;
+        background-color: transparent;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &--promo {
+            letter-spacing: 0.1em;
+        }
+
+        &:hover {
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 8px;
+                width: 100%;
+                height: 3px;
+                background-color: #E0EDCF;
+            }
+        }
+    }
+}

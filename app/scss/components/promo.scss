@@ -1,0 +1,77 @@
+.promo {
+    background-color: $silver-100;
+    text-align: center;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px -15px 29px;
+    }
+
+    &__item {
+        max-width: 300px;
+        width: 100%;
+        margin: 15px 15px;
+        @extend %radius;
+    }
+
+    &__card {
+        display: flex;
+        padding: 12px;
+        min-height: 0;
+    }
+
+    &__img {
+        margin: 0 12px 0 0;
+        object-fit: contain;
+    }
+
+    &__price {
+        position: absolute;
+        left: 124px;
+        bottom: 9px;
+    }
+
+    &__price-new {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__availability {
+        font-size: 10px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        &--available {
+            color: $green-900;
+        }
+
+        &--ends {
+            color: $red-900;
+        }
+
+        &--unavailable {
+            color: $silver-600;
+        }
+    }
+
+    &__star {
+        position: absolute;
+        right: 14px;
+        bottom: 12px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.1em;
+    }
+
+    &__btn {
+        padding: 12px 24px;
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        background-color: $green-900;
+        @extend %radius;
+    }
+}

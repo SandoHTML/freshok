@@ -1,0 +1,31 @@
+.copyright {
+    border-top: 1px solid rgba($white, 0.1);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        text-transform: uppercase;
+    }
+
+    &__icons {
+        display: flex;
+    }
+
+    &__link {
+        @extend %transition;
+
+        &--visa {
+            margin-right: 24px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__img {
+        @extend %cover;
+    }
+}

@@ -1,0 +1,94 @@
+.news {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        padding: 0 0 6px 0;
+        margin-right: 6px;
+        font-weight: 700;
+        color: $green-900;
+        background-color: transparent;
+        border-bottom: 2px solid $green-900;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        @extend %transition;
+
+        &:hover,
+        &:active {
+            color: #4D800C;
+            border-bottom: 2px solid #4D800C;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 72px;
+    }
+
+    &__item {
+        flex-basis: 410px;
+        @extend %radius;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+
+        &:hover .news__article-title {
+            color: $green-900;
+        }
+    }
+
+    &__article {
+        position: relative;
+    }
+
+    &__date {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 65px;
+        width: 100%;
+        padding: 18px 0 6px 0;
+        background-color: $white;
+        border-radius: 0 0 4px 4px;
+        text-align: center;
+    }
+
+    &__date-month {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__date-day {
+        @extend %Ruda;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    &__img {
+        border-radius: 6px 6px 0 0;
+    }
+
+    &__article-title {
+        max-height: 106px;
+        margin: 17px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        @extend %transition;
+        @extend %textoverflow;
+        -webkit-line-clamp: 3;
+    }
+}

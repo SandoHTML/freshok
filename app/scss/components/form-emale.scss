@@ -1,0 +1,54 @@
+.form-emale {
+    position: relative;
+    padding-right: 122px;
+
+    &__input {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        line-height: 1;
+        color: $silver-600;
+        border: 1px solid transparent;
+        border-radius: 6px 0 0 6px;
+
+        &:focus {
+            box-shadow: 0 0 0 4px #E0EDCF;
+            border: 1px solid $green-900;
+            z-index: 3;
+        }
+
+        &::placeholder {
+            color: #4F4F4F;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 11px 15px;
+        font-size: 12px;
+        font-weight: 700;
+        color: $white;
+        background-color: $green-900;
+        border-radius: 0 6px 6px 0;
+        text-transform: uppercase;
+        @extend %transition;
+
+        &:focus {
+            box-shadow: 0 0 0 4px #E0EDCF;
+        }
+
+        &:hover {
+            background-color: #4D810C;
+            box-shadow: none;
+        }
+
+        &:active {
+            color: rgba($white, 0.5);
+            background-color: $green-900;
+            box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}

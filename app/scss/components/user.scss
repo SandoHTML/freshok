@@ -1,0 +1,52 @@
+.user {
+    display: flex;
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: rgba($white, 0.1);
+            border-radius: 3px
+        }
+
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 7px 11px;
+    }
+
+    &__favourite {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        padding: 7px 9px 7px 9px;
+    }
+
+    &__basket {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        padding: 7px 9px 7px 9px;
+    }
+
+    &__number {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        padding: 3px 3px;
+        font-size: 10px;
+        font-weight: 600;
+        color: $red-900;
+        background-color: $white;
+        border-radius: 50%;
+        text-align: center;
+    }
+}

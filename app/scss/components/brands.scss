@@ -1,0 +1,16 @@
+.brands {
+
+    &__list {
+        margin: 0 55px;
+    }
+
+    &__img {
+        object-fit: contain;
+        opacity: 0.5;
+        @extend %transition;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

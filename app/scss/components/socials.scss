@@ -1,0 +1,22 @@
+.socials {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    &__link {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        @extend %transition;
+
+        &:hover,
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
