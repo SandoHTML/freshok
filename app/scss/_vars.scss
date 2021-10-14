@@ -28,7 +28,7 @@ $white: #FFFFFF;
 }
 
 %transition {
-    transition: fill 0.4s, color 0.4s, background-color 0.4s, opacity 0.4s;
+    transition: transform 0.4s, fill 0.4s, color 0.4s, background-color 0.4s, opacity 0.4s;
 }
 
 %textoverflow {

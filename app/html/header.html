@@ -3,6 +3,80 @@
     <div class="header__top">
         <div class="container">
             <div class="header__inner">
+                <button class="header__burger">
+                    <span></span>
+                </button>
+                <div class="burger">
+                    <div class="burger__logo">
+                        <a  class="burger__logo" href="#">
+                            <img src="../images/svg/logo-green.svg" width="200" height="60" alt="логотип магазина ФрешОк">
+                        </a>
+                        <button class="burger__btn" style="background-image: url(../images/svg/close-icon.svg)"></button>
+                    </div>
+
+                    <div class="login" style="background-image: url(../images/svg/user.svg)">
+                        <a href="#">Вход</a> | <a href="#">Регистрация</a>
+                    </div>
+
+                    <button class="burger__catalog" type="button" style="background-image: url(../images/svg/nav_icon-burger.svg)">Каталог продуктов</button>
+                    
+                    <div class="burger__contacts">
+                        <a class="burger__tel" href="tel:+7907288365" style="background-image: url(../images/svg/tel-black.svg)">+7 907 288 365</a>
+                    <a class="burger__location" href="#" style="background-image: url(../images/svg/location.svg)">Санкт-Петербург, ул. Ленина, 1</a>
+                    <ul class="socials">
+                        <li class="socials__item">
+                            <a class="socials__link" href="#"
+                                style="background-image: url(../images/svg/facebook-black.svg)">
+                                <span class="sr-only">перейти в фейсбук</span>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#" style="background-image: url(../images/svg/youtube-black.svg)">
+                                <span class="sr-only">перейти в ютуб</span>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#"
+                                style="background-image: url(../images/svg/telegram-black.svg)">
+                                <span class="sr-only">перейти в телеграм</span>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#"
+                                style="background-image: url(../images/svg/instagram-black.svg)">
+                                <span class="sr-only">перейти в инстаграм</span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <ul class="burger__menu-list">
+                        <li>
+                            <a href="#">Доставка</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#">Акции</a>
+                        </li>
+                        <li>
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="#">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#">Публичная оферта</a>
+                        </li>
+                    </ul>
+                </div>
                 <ul class="menu">
                     <li class="menu__item menu__item--delivery">
                         <a class="menu__link" href="#">адрес и время доставки</a>
@@ -30,8 +104,11 @@
         <div class="container">
             <nav class="header__navigation">
                 <a class="logo" href="#">
-                    <img class="logo__img" src="images/svg/logo.svg" width="200" height="60"
-                        alt="логотип компании">
+                <picture>
+                    <source srcset="../images/svg/logo-small.svg" media="(max-width: 576px)">
+                    <img class="logo__img" src="../images/svg/logo.svg" width="200" height="60"
+                    alt="логотип компании">
+                </picture>
                 </a>
                 <div class="header__catalog">
                     <button class="header__catalog-btn" type="button">Каталог продуктов</button>
@@ -81,6 +158,9 @@
                     <button class="form-search__button button" type="submit">Поиск</button>
                 </form>
                 <div class="user">
+                    <div class="user__item">
+                        <button class="user__search" type="button" style="background-image: url(../images/svg/search-white.svg)"></button>
+                    </div>
                     <div class="user__item">
                         <a class="user__link user-element" href="#">
                             <svg width="25" height="32" viewBox="0 0 25 32" fill="none"

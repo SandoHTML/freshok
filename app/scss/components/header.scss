@@ -5,6 +5,14 @@
         color: $white;
         background-color: $dark-800;
         letter-spacing: 0.03em;
+
+        @media (max-width: 768px) {
+            padding: 10px 0;
+        }
+
+        @media (max-width: 576px) {
+            padding: 3px 0;
+        }
     }
 
     &__inner {
@@ -12,8 +20,46 @@
         justify-content: space-between;
     }
 
+    &__burger {
+        position: relative;
+        display: none;
+        padding: 22px;
+        background-color: transparent;
+
+        &::before,
+        &::after,
+        & span {
+            content: "";
+            position: absolute;
+            left: 7px;
+            width: 30px;
+            height: 2px;
+            background-color: $white;
+        }
+
+        & span {
+            top: 21px;
+        }
+
+        &::before {
+            top: 12px;
+        }
+
+        &::after {
+            bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
     &__bottom {
         background-color: $green-900;
+
+        @media (max-width: 768px) {
+            position: relative;
+        }
     }
 
     &__navigation {
@@ -21,10 +67,36 @@
         justify-content: space-between;
         align-items: center;
         padding: 24px 0;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 576px) {
+            padding: 8px 0;
+        }
+    }
+
+    &__catalog {
+        max-width: 240px;
+        width: 100%;
+        margin-right: 10px;
+
+        @media (max-width: 992px) {
+            order: 2;
+            max-width: 100%;
+            margin: 10px 0 0 0;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__catalog-btn {
         position: relative;
+        width: 100%;
         padding: 12px 38px 12px 61px;
         font-weight: 600;
         line-height: 1.9;

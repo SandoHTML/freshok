@@ -5,7 +5,16 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: $('.slider-discount__arrow--prev'),
-        nextArrow: $('.slider-discount__arrow--next')
+        nextArrow: $('.slider-discount__arrow--next'),
+        responsive: [{
+          breakpoint: 1580,
+          settings: {
+            adaptiveHeight: true,
+            arrows: false,
+            dots: true
+          }
+        }]
+
       });
 
 
@@ -19,6 +28,13 @@ $(function () {
       autoplay: true,
       autoplaySpeed: 2000
     });
+
+
+
+    $('.header__burger, .burger__btn').on('click', function () {
+      $('.burger').toggleClass('burger--active')
+      $('body').toggleClass('lock')
+  })
 
 
 

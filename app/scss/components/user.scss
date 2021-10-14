@@ -1,6 +1,20 @@
 .user {
     display: flex;
 
+    &__search {
+        display: none;
+        width: 44px;
+        height: 44px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px 24px;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
     &__item {
         position: relative;
         display: flex;
@@ -14,13 +28,22 @@
 
         &:not(:last-child) {
             margin-right: 13px;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+            }
         }
+
     }
 
     &__link {
         display: flex;
         align-items: center;
         padding: 7px 11px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__favourite {
@@ -28,6 +51,10 @@
         align-items: center;
         background-color: transparent;
         padding: 7px 9px 7px 9px;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
     }
 
     &__basket {

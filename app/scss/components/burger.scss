@@ -1,0 +1,88 @@
+.burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 300px;
+    padding: 15px 0;
+    background-color: $white;
+    transform: translateX(-200%);
+    @extend %transition;
+
+    &--active {
+        transform: translateX(0);
+    }
+
+    &__tel,
+    &__location,
+    &__catalog {
+        color: $dark-800;
+        font-size: 18px;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+    }
+
+    &__tel,
+    &__location {
+        display: block;
+        padding-left: 41px;
+    }
+
+    &__logo {
+        padding: 0 15px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 25px;
+        right: 4px;
+        padding: 22px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 18px;
+    }
+
+    &__catalog {
+        padding: 14px 0 14px 56px;
+        background-color: transparent;
+        background-position: 15px center;
+    }
+
+    &__contacts {
+        padding: 24px 15px;
+        margin-bottom: 24px;
+        border-top: 1px solid rgba(193, 193, 193, 0.3);
+        ;
+        border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+        ;
+    }
+
+    &__tel {
+        margin-bottom: 14px;
+    }
+
+    &__location {
+        margin-bottom: 18px;
+    }
+
+    &__menu-list {
+        margin-left: 15px;
+        color: $dark-800;
+        font-size: 18px;
+    }
+
+    &__menu-list li {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.login {
+    padding: 15px 15px 15px 57px;
+    background-color: $green-900;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 25px 32px;
+}

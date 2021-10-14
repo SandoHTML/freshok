@@ -32,7 +32,23 @@ body {
 }
 
 .logo {
-    object-fit: cover;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+
+    &__img {
+        object-fit: cover;
+
+        @media (max-width: 576px) {
+            width: 36px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        max-width: 40px;
+    }
+
 }
 
 .button {
