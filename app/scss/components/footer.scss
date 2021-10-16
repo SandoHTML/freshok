@@ -6,6 +6,12 @@
     &__logo {
         display: block;
         padding: 31px 0;
+        max-width: 200px;
+
+        @include mw($_576) {
+            margin: 0 auto;
+            padding: 25px 0;
+        }
     }
 
     &__logo-img {
@@ -16,16 +22,29 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+
+        @include mw($_768) {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-bottom: 24px;
+        }
     }
 
     &__email-item {
         max-width: 306px;
+        margin-right: 10px;
     }
 
     &__text {
         margin-bottom: 18px;
         line-height: 1;
         font-weight: 400;
+    }
+
+    &__contact {
+        @include mw($_768) {
+            margin-bottom: 24px;
+        }
     }
 
     &__contacts {

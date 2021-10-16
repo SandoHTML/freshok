@@ -4,8 +4,13 @@
 
     &__list {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         margin: -15px -15px 29px;
+
+        @include mw($_576) {
+            margin: 0 0 9px;
+        }
     }
 
     &__item {
@@ -13,17 +18,33 @@
         width: 100%;
         margin: 15px 15px;
         @extend %radius;
+
+        @include mw($_576) {
+            margin: 0 0 15px;
+        }
     }
 
     &__card {
         display: flex;
-        padding: 12px;
+        max-height: 124px;
         min-height: 0;
+        padding: 12px;
     }
 
     &__img {
-        margin: 0 12px 0 0;
         object-fit: contain;
+        max-width: 100px;
+        max-height: 100px;
+        margin: 0 12px 0 0;
+    }
+
+    &__lable {
+        padding: 0;
+        min-height: 87px;
+
+        @include mw($_576) {
+            min-height: 88px;
+        }
     }
 
     &__price {

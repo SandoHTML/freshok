@@ -6,11 +6,11 @@
         background-color: $dark-800;
         letter-spacing: 0.03em;
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             padding: 10px 0;
         }
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             padding: 3px 0;
         }
     }
@@ -49,7 +49,7 @@
             bottom: 12px;
         }
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             display: block;
         }
     }
@@ -57,7 +57,7 @@
     &__bottom {
         background-color: $green-900;
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             position: relative;
         }
     }
@@ -73,7 +73,7 @@
             padding: 10px 0;
         }
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             padding: 8px 0;
         }
     }
@@ -89,7 +89,7 @@
             margin: 10px 0 0 0;
         }
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             display: none;
         }
     }

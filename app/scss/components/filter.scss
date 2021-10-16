@@ -3,8 +3,11 @@
     justify-content: center;
     margin-bottom: 36px;
 
-    &__item:not(:last-child) {
-        margin-right: 24px;
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
     }
 
     &__button {
@@ -33,5 +36,17 @@
                 background-color: #E0EDCF;
             }
         }
+
+        @include mw($_576) {
+            padding: 9px 0;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+    }
+
+    @include mw($_576) {
+        flex-wrap: wrap;
+        margin-bottom: 17px;
     }
 }

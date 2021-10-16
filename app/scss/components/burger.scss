@@ -86,3 +86,19 @@
     background-position: 15px center;
     background-size: 25px 32px;
 }
+
+.lock {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($dark-900, 0.15);
+    }
+
+}

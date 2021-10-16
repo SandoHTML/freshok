@@ -7,10 +7,18 @@
         align-items: center;
         padding: 24px 0;
         text-transform: uppercase;
+
+        @include mw($_576) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__icons {
         display: flex;
+
+        @include mw($_576) {
+            margin-bottom: 24px;
+        }
     }
 
     &__link {

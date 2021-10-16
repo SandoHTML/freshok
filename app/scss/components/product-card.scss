@@ -25,14 +25,49 @@
         }
     }
 
+    &__icon {
+
+        &--star {
+            @include mw($_576) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        @include mw($_576) {
+            width: 24px;
+            height: 21px;
+        }
+    }
+
     &__icon--basket {
         width: 16px;
         height: 16px;
     }
 
-    &__img {
+    &__image {
+        display: block;
         margin-bottom: 18px;
+
+        @include mw($_768) {
+            width: 228px;
+            height: 186px;
+        }
+
+        @include mw($_576) {
+            width: 168px;
+            height: 122px;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__img {
         @extend %cover;
+
+        @include mw($_768) {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__lable {
@@ -43,12 +78,24 @@
         font-weight: 600;
         line-height: 1.4;
         letter-spacing: 0.03em;
-        @extend %textoverflow;
-        -webkit-line-clamp: 3;
         @extend %transition;
+
+        &>a {
+            @extend %textoverflow;
+            -webkit-line-clamp: 3;
+        }
 
         &:hover {
             opacity: 0.5;
+        }
+
+        @include mw($_768) {
+            max-width: 185px;
+            padding: 0 11px;
+        }
+
+        @include mw($_576) {
+            max-width: 167px;
         }
     }
 
@@ -62,6 +109,11 @@
         left: 20px;
         bottom: 13px;
         font-weight: 400;
+
+        @include mw($_576) {
+            left: 12px;
+            bottom: 12px;
+        }
     }
 
     &__price-old {
@@ -95,5 +147,15 @@
         padding: 7px;
         background-color: $green-900;
         border-radius: 3px;
+
+        @include mw($_576) {
+            right: 10px;
+            bottom: 14px;
+        }
+    }
+
+    @include mw($_768) {
+        min-height: 0;
+        padding: 56px 0 84px;
     }
 }

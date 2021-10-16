@@ -1,7 +1,8 @@
 .brands {
 
-    &__list {
-        margin: 0 55px;
+    &__link {
+        display: flex;
+        justify-content: center;
     }
 
     &__img {
@@ -13,4 +14,10 @@
             opacity: 1;
         }
     }
+}
+
+.brands .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

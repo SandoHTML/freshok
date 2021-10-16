@@ -10,7 +10,7 @@
         background-position: center;
         background-size: 24px 24px;
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             display: block;
         }
     }
@@ -29,7 +29,7 @@
         &:not(:last-child) {
             margin-right: 13px;
 
-            @media (max-width: 768px) {
+            @include mw($_768) {
                 margin-right: 0;
             }
         }
@@ -41,7 +41,7 @@
         align-items: center;
         padding: 7px 11px;
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             display: none;
         }
     }
@@ -52,7 +52,7 @@
         background-color: transparent;
         padding: 7px 9px 7px 9px;
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             display: none;
         }
     }

@@ -47,7 +47,7 @@
             fill: $green-900;
         }
 
-        @media (max-width: 1580px) {
+        @include mw($_1600) {
             display: none;
         }
     }
@@ -66,17 +66,17 @@
         background-size: cover;
 
         &>.container {
-            @media (max-width: 576px) {
+            @include mw($_576) {
                 padding: 0;
             }
         }
 
-        @media (max-width: 992px) {
+        @include mw($_992) {
             min-height: 0;
             padding: 90px 0;
         }
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             padding: 60px 0 51px;
         }
     }
@@ -88,7 +88,7 @@
         background-color: rgba($white, 0.8);
         @extend %radius;
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             padding: 15px;
             border-radius: 0;
         }
@@ -104,11 +104,11 @@
         @extend %textoverflow;
         -webkit-line-clamp: 3;
 
-        @media (max-width: 992px) {
+        @include mw($_992) {
             font-size: calc(18px + (42 + 42 * 0.7) * ((100vw - 320px) / 1920));
         }
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -126,7 +126,7 @@
         @extend %textoverflow;
         -webkit-line-clamp: 2;
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             margin-bottom: 26px;
         }
     }
@@ -138,7 +138,7 @@
         background-color: $green-900;
         @extend %radius;
 
-        @media (max-width: 992px) {
+        @include mw($_992) {
             font-size: 14px;
         }
     }
@@ -164,7 +164,7 @@
             margin-right: 12px;
         }
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             width: 10px;
             height: 10px;
         }
@@ -175,7 +175,7 @@
         width: 22px;
         height: 22px;
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             width: 13px;
             height: 13px;
         }
@@ -185,7 +185,7 @@
         background-color: transparent;
     }
 
-    @media (max-width: 576px) {
+    @include mw($_576) {
         bottom: 14px;
     }
 }

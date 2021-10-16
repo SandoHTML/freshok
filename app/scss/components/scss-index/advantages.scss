@@ -9,7 +9,7 @@
         width: 100%;
         margin: 0 auto;
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             flex-direction: column;
         }
     }
@@ -25,18 +25,18 @@
         &:not(:last-child) {
             margin-right: 10px;
 
-            @media (max-width: 768px) {
+            @include mw($_768) {
                 margin: 0 0 21px;
             }
         }
 
-        @media (max-width: 768px) {
+        @include mw($_768) {
             padding: 74px 5px 5px 5px;
             text-align: center;
             background-position: center 0;
         }
 
-        @media (max-width: 576px) {
+        @include mw($_576) {
             max-width: 100%;
             padding: 5px 5px 5px 74px;
             text-align: left;
@@ -58,7 +58,7 @@
         -webkit-line-clamp: 2;
     }
 
-    @media (max-width: 768px) {
+    @include mw($_768) {
         padding: 25px 0;
     }
 }

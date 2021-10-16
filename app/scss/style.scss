@@ -1,21 +1,22 @@
 @import 'reset';
 @import 'fonts';
 @import 'vars';
+@import 'mixin';
 @import 'libs';
 @import 'global';
 @import 'components/menu.scss';
-@import 'components/header.scss';
+@import 'components/scss-index/header.scss';
 @import 'components/form-search.scss';
 @import 'components/user.scss';
-@import 'components/slider-discount.scss';
-@import 'components/advantages.scss';
-@import 'components/products.scss';
+@import 'components/scss-index/slider-discount.scss';
+@import 'components/scss-index/advantages.scss';
+@import 'components/scss-index/products.scss';
 @import 'components/product-card.scss';
 @import 'components/badges.scss';
 @import 'components/filter.scss';
 @import 'components/banners.scss';
-@import 'components/promo.scss';
-@import 'components/news.scss';
+@import 'components/scss-index/promo.scss';
+@import 'components/scss-index/news.scss';
 @import 'components/brands.scss';
 @import 'components/footer.scss';
 @import 'components/form-emale.scss';
@@ -23,20 +24,3 @@
 @import 'components/socials.scss';
 @import 'components/copyright.scss';
 @import 'components/burger.scss';
-
-
-// @media (max-width: 1200px) {
-
-// }
-
-// @media (max-width: 992px) {
-
-// }
-
-// @media (max-width: 768px) {
-
-// }
-
-// @media (max-width: 576px) {
-
-// }

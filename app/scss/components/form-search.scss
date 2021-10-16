@@ -4,13 +4,13 @@
     width: 100%;
     margin-right: 21px;
 
-    @media (max-width: 992px) {
+    @include mw($_992) {
         order: 1;
         max-width: 100%;
         margin: 10px 0 0 0;
     }
 
-    @media (max-width: 768px) {
+    @include mw($_768) {
         display: none;
     }
 
@@ -87,7 +87,7 @@
             box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
         }
 
-        @media (max-width: 1200px) {
+        @include mw($_1200) {
             padding: 10px 28px;
         }
     }
